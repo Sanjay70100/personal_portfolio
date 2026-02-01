@@ -1,0 +1,404 @@
+/* ==============================
+GENERAL RESET
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #111;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ==============================
+PARTICLES BACKGROUND
+============================== */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* ==============================
+NAVBAR
+============================== */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    padding: 15px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff0000;
+    letter-spacing: 1px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links .link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+.links .link a:hover {
+    color: #ff0000;
+}
+
+.links .link a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #ff0000;
+    transition: 0.3s;
+}
+
+.links .link a:hover::after {
+    width: 100%;
+}
+
+.hamburg {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ff0000;
+}
+
+/* DROPDOWN MOBILE NAV */
+.dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(17,17,17,0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.dropdown a {
+    display: block;
+    margin: 20px 0;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    color: #ff0000;
+}
+
+.dropdown .cancel {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ff0000;
+}
+
+/* ==============================
+HERO SECTION
+============================== */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 60px;
+    gap: 50px;
+}
+
+.main-container .image img {
+    width: 350px;
+    border-radius: 50%;
+    border: 5px solid #ff0000;
+    transition: transform 0.5s;
+}
+
+.main-container .image img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.content h1 span {
+    color: #ff0000;
+}
+
+.typewriter {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.typewriter label {
+    color: #ff0000;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+.content p {
+    color: #ccc;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.social-links a {
+    margin-right: 15px;
+    font-size: 22px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff0000;
+    transform: scale(1.3);
+}
+
+.btn button {
+    background: #ff0000;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn button:hover {
+    background: #fff;
+    color: #ff0000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff0000;
+}
+
+/* ==============================
+ABOUT SECTION
+============================== */
+.about {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1200px;
+}
+
+.about-details .left img {
+    width: 350px;
+    border-radius: 15px;
+    border: 3px solid #ff0000;
+    transition: transform 0.5s;
+}
+
+.about-details .left img:hover {
+    transform: scale(1.05) rotate(-3deg);
+}
+
+.about-details .right .topic {
+    font-size: 28px;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.about-details .right p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.about-details .right .button button {
+    background: #ff0000;
+    border-radius: 50px;
+}
+
+/* ==============================
+SKILLS SECTION
+============================== */
+.Skills {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.skill {
+    margin: 20px 0;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill span {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #333;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #ff0000;
+    border-radius: 50px;
+    animation: fillBar 2s forwards;
+}
+
+.progress-bar.html { animation-delay: 0.2s; }
+.progress-bar.css { animation-delay: 0.4s; }
+.progress-bar.js { animation-delay: 0.6s; }
+.progress-bar.php { animation-delay: 0.8s; }
+
+@keyframes fillBar {
+    to { width: 90%; } /* adjust width for each skill in HTML inline style or via JS */
+}
+
+/* ==============================
+SERVICES SECTION
+============================== */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.services .box {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    width: 250px;
+    transition: 0.5s;
+}
+
+.services .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #ff0000;
+}
+
+.services .box .icon {
+    font-size: 40px;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.services .box .topic {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.services .box p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* ==============================
+CONTACT SECTION
+============================== */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact .text .topic {
+    font-size: 28px;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.contact .text p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.contact .text .button button {
+    background: #ff0000;
+    border-radius: 50px;
+}
+
+/* ==============================
+FOOTER
+============================== */
+footer {
+    background: #111;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+/* ==============================
+RESPONSIVE
+============================== */
+@media screen and (max-width: 900px){
+    .main-container, .about-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links { display: none; }
+    .hamburg { display: block; }
+}
